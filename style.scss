@@ -1,0 +1,142 @@
+$primaryColor: rgb(231,222,213);
+$secondaryColor: rgb(131,169,172);
+$thirdColor: rgb(59,105,120);
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+*{
+box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: $primaryColor;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+header{
+    width: 80%;
+    background-color:$thirdColor;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: 'Shadows Into Light', cursive;
+    color:white;
+    letter-spacing: 10px;
+}
+
+main{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 25px;
+}
+
+article{
+    width:32% ;
+    
+    
+    
+}
+
+
+
+.article{
+    &__title{
+        color: $thirdColor;
+    }
+
+    &__main{
+        border: 3px solid $secondaryColor;
+        padding-left: 25px;
+        height: 500px;
+        font-size: 20px;
+
+
+        ul{
+            list-style: square;
+            color: $thirdColor;
+            padding: 0px 20px;
+            display: flex;
+            flex-direction: column;
+
+            li{               
+                padding:3px 3px;                         
+                           
+             a{
+                display: none;
+            }
+
+            &:hover{
+                background-color:#00000015 ;
+
+                a{
+                    display: inline;
+                    float: right;
+                    
+
+                    img{                       
+                        opacity: 50%;                       
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+}
+footer{
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    color: $thirdColor;
+}
+
+form{
+    display: flex;      
+    width: 100%;
+   
+}
+
+
+input[type="text"]{
+    background: none;
+    border: none;
+    border-bottom: 2px solid $thirdColor;
+    height: 40px;
+    color: $thirdColor;
+    font-size: 20px;
+    width: 70%;
+    margin-right: 15px;
+
+    &:focus{
+        border:none;
+    }
+
+}
+
+input[type="submit"]{
+    background: none;
+    border: none;
+    font-size: 35px;
+    color: $thirdColor;
+    width: 40px;
+    height: 40px;
+
+    &:hover{
+        border-radius: 50%;
+        background-color: #00000015;
+        cursor:pointer;
+    }
+}
